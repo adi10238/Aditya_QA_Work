@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.8 on win32)" generated="2025-03-21T11:05:03.155466" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo1" source="C:\Users\Aditya\PycharmProjects\Robot Framework\tests\testDemo1.robot">
+<test id="s1-t1" name="Opens a browser and navigate to website" line="15">
+<kw name="Opens a browser and navigate to website">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:03.392229" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-21T11:05:03.392229" elapsed="2.298420"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:05.699108" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-21T11:05:05.698552" elapsed="0.464795"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:03.392229" elapsed="2.771118"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:03.392229" elapsed="2.771698"/>
+</test>
+<test id="s1-t2" name="Logs in using valid and invalid credentials" line="18">
+<kw name="Log in using invalid credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.167398" level="INFO">Typing text 'abc' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.166239" elapsed="0.123668"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.289907" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.289907" elapsed="0.080065"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.369972" level="INFO">Clicking button 'login-button'.</msg>
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.369972" elapsed="0.057334"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.454896" level="INFO">Current page contains text 'match'.</msg>
+<arg>match</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.428331" elapsed="0.026565"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:06.166239" elapsed="0.288657"/>
+</kw>
+<kw name="Log in using valid credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.454896" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.454896" elapsed="0.063865"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.518761" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.518761" elapsed="0.069741"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.588502" level="INFO">Clicking button 'login-button'.</msg>
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.588502" elapsed="0.066927"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:06.454896" elapsed="0.200533"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:06.163927" elapsed="0.491502"/>
+</test>
+<test id="s1-t3" name="Searches for an item after login" line="22">
+<kw name="Select items">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:06.658419" level="INFO">Clicking button 'add-to-cart-sauce-labs-backpack'.</msg>
+<arg>add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.658419" elapsed="0.074871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-21T11:05:09.735665" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-21T11:05:06.733290" elapsed="3.002375"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:09.735665" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:09.735665" elapsed="0.053538"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:09.901728" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot.png"&gt;&lt;img src="screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-21T11:05:09.789203" elapsed="0.112525"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:06.657422" elapsed="3.244306"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:06.657422" elapsed="3.244306"/>
+</test>
+<test id="s1-t4" name="Validates search results" line="25">
+<kw name="Verify added elements">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.021095" level="INFO">Element 'xpath://div[text()='Sauce Labs Backpack']' is displayed.</msg>
+<arg>xpath://div[text()='Sauce Labs Backpack']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T11:05:09.901728" elapsed="0.119367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.021095" level="INFO">Clicking element 'checkout'.</msg>
+<arg>checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.021095" elapsed="0.046154"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:09.901728" elapsed="0.165521"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:09.901728" elapsed="0.165521"/>
+</test>
+<test id="s1-t5" name="Completing the checkout process" line="28">
+<kw name="Checkout process">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.067249" level="INFO">Typing text 'Aditya' into text field 'first-name'.</msg>
+<arg>first-name</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.067249" elapsed="0.056064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.123313" level="INFO">Typing text 'Sharma' into text field 'last-name'.</msg>
+<arg>last-name</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.123313" elapsed="0.062724"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.186963" level="INFO">Typing text '201002' into text field 'postal-code'.</msg>
+<arg>postal-code</arg>
+<arg>${POSTAL_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.186037" elapsed="0.050977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.238025" level="INFO">Clicking element 'continue'.</msg>
+<arg>continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.238025" elapsed="0.068656"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.319312" level="INFO">Current page contains text 'Total'.</msg>
+<arg>Total</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.306681" elapsed="0.012631"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.319312" level="INFO">Clicking element 'finish'.</msg>
+<arg>finish</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.319312" elapsed="0.045552"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.368816" level="INFO">Current page contains text 'Thank you for your order!'.</msg>
+<arg>Thank you for your order!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.364864" elapsed="0.003952"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-21T11:05:10.465205" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-21T11:05:10.368816" elapsed="0.096389"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:10.067249" elapsed="0.397956"/>
+</kw>
+<status status="PASS" start="2025-03-21T11:05:10.067249" elapsed="0.397956"/>
+</test>
+<doc>Automate a Login &amp; Search Functionality</doc>
+<status status="PASS" start="2025-03-21T11:05:03.155466" elapsed="7.309739"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testDemo1" id="s1" pass="5" fail="0" skip="0">testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
